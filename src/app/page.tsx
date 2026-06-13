@@ -9,10 +9,10 @@ import {
 } from "@/data/menu";
 
 const navItems = [
-  { label: "Menu", href: "#menu" },
-  { label: "Favorites", href: "#favorites" },
-  { label: "Location", href: "#location" },
-  { label: "Instagram", href: locationInfo.instagramUrl },
+  { label: "Menu", href: "#menu", external: false },
+  { label: "Order", href: locationInfo.orderUrl, external: true },
+  { label: "Location", href: "#location", external: false },
+  { label: "Instagram", href: locationInfo.instagramUrl, external: true },
 ];
 
 function formatPrices(item: MenuItem) {
@@ -102,6 +102,14 @@ export default function Home() {
           <p className="subtext">
             Browse customer favorites, drinks, desserts, and caf&eacute; classics.
           </p>
+          <a
+            className="order-btn"
+            href={locationInfo.orderUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Order Now &rarr;
+          </a>
         </div>
       </section>
 
@@ -116,6 +124,9 @@ export default function Home() {
           onChange={(event) => setSearch(event.target.value)}
           placeholder="Search drinks, waffles, bingsu..."
         />
+        <p className="size-legend">
+          <span>T</span> Tall &nbsp;·&nbsp; <span>G</span> Grande &nbsp;·&nbsp; <span>V</span> Venti
+        </p>
         <div className="category-scroll" aria-label="Menu categories">
           <button
             className={activeCategory === "all" ? "active" : ""}
@@ -197,7 +208,11 @@ export default function Home() {
 
       <nav className="bottom-nav" aria-label="Quick links">
         {navItems.map((item) => (
-          <a key={item.label} href={item.href}>
+          <a
+            key={item.label}
+            href={item.href}
+            {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          >
             {item.label}
           </a>
         ))}

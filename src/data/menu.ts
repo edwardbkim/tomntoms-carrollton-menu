@@ -36,10 +36,11 @@ export type MenuCategory = {
 export const locationInfo = {
   name: "Tom N Tom's Coffee & Eatery",
   city: "Carrollton, TX",
-  address: "TODO: Add store address",
-  phone: "TODO: Add store phone",
-  hours: "TODO: Add store hours",
-  instagramUrl: "https://www.instagram.com/",
+  address: "2625 Old Denton Rd #406, Carrollton, TX 75007",
+  phone: "(972) 446-6633",
+  hours: "Sun–Thu  9 am–10 pm  ·  Fri–Sat  9 am–11 pm",
+  instagramUrl: "https://www.instagram.com/tomntomscarrollton/",
+  orderUrl: "https://order.peblla.com/tomntomscoffeecarrollton/order?sid=1242716167369096704",
 };
 
 const sizePrices = (t: string, g?: string, v?: string): MenuPrice[] =>
