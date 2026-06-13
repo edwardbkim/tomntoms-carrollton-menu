@@ -194,11 +194,20 @@ export default function Home() {
         <dl>
           <div>
             <dt>Address</dt>
-            <dd>{locationInfo.address}</dd>
+            <dd>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=2625+Old+Denton+Rd+%23406+Carrollton+TX+75007"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {locationInfo.address}
+              </a>
+            </dd>
           </div>
           <div>
             <dt>Phone</dt>
             <dd>{locationInfo.phone}</dd>
+            <dd>{locationInfo.phone2}</dd>
           </div>
           <div>
             <dt>Hours</dt>

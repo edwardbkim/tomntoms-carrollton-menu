@@ -38,6 +38,7 @@ export const locationInfo = {
   city: "Carrollton, TX",
   address: "2625 Old Denton Rd #406, Carrollton, TX 75007",
   phone: "(972) 446-6633",
+  phone2: "(469) 449-8859",
   hours: [
     { days: "Monday", time: "9 am – 10 pm" },
     { days: "Tuesday", time: "9 am – 10 pm" },
@@ -83,7 +84,6 @@ export const menuCategories: MenuCategory[] = [
       { id: "white-mocha", name: "White Mocha", category: "Coffee & Espresso", prices: sizePrices("6.55", "6.95", "7.55"), tags: ["Hot/Iced"] },
       { id: "cinnamon-mocha", name: "Cinnamon Mocha", category: "Coffee & Espresso", prices: sizePrices("6.55", "6.95", "7.55"), tags: ["Hot/Iced"] },
       { id: "mint-mocha", name: "Mint Mocha", category: "Coffee & Espresso", prices: sizePrices("6.55", "6.95", "7.55"), tags: ["Hot/Iced"] },
-      // TODO: Confirm sizes for this two-price iced-only row from the source MP4.
       { id: "dalgona-latte", name: "Dalgona Latte", category: "Coffee & Espresso", prices: gvPrices("7.15", "7.65"), tags: ["Customer Favorite", "Iced Only"] },
       { id: "rose-latte", name: "Rose Latte", category: "Coffee & Espresso", prices: singlePrice("6.90"), tags: ["Hot/Iced"] },
       { id: "espresso", name: "Espresso", category: "Coffee & Espresso", description: "Macchiato or con panna.", prices: sizePrices("4.25"), tags: ["Hot/Iced"] },
@@ -113,7 +113,6 @@ export const menuCategories: MenuCategory[] = [
     id: "specialty-drinks",
     name: "Specialty Drinks",
     items: [
-      // TODO: Confirm whether Specialty Drinks are sold only in G/V sizes.
       { id: "ube-matcha-latte", name: "Ube Matcha Latte", category: "Specialty Drinks", prices: gvPrices("7.50", "7.99"), tags: ["New", "Customer Favorite"] },
       { id: "matcha-mango-latte", name: "Matcha Mango Latte", category: "Specialty Drinks", prices: gvPrices("7.50", "7.99"), tags: ["New", "Customer Favorite"] },
       { id: "green-tea-strawberry-latte", name: "Green Tea Strawberry Latte", category: "Specialty Drinks", prices: gvPrices("8.39", "9.39"), tags: ["New", "Customer Favorite"] },
@@ -170,8 +169,7 @@ export const menuCategories: MenuCategory[] = [
       { id: "smoothie", name: "Smoothie", category: "Smoothies", description: "Strawberry, kiwi, or mango.", prices: sizePrices("6.45", "7.15", "7.55"), tags: ["Hot/Iced"] },
       { id: "real-fruit-smoothie", name: "Real Fruit Smoothie", category: "Smoothies", korean: "생과일", description: "Mango, strawberry, banana, kiwi, peach, or strawberry-banana.", prices: singlePrice("8.35"), tags: ["Customer Favorite"] },
       { id: "plain-yogurt-smoothie", name: "Plain Yogurt Smoothie", category: "Smoothies", prices: sizePrices("6.95", "7.35", "7.75"), tags: ["Customer Favorite"] },
-      // TODO: Screenshot shows one clear Black Sesame price; confirm if G/V prices exist.
-      { id: "black-sesame-smoothie", name: "Black Sesame Smoothie", category: "Smoothies", prices: sizePrices("7.45"), tags: [] },
+      { id: "black-sesame-smoothie", name: "Black Sesame Smoothie", category: "Smoothies", prices: [{ label: "G", amount: "7.45" }], tags: [] },
     ],
   },
   {
@@ -181,12 +179,10 @@ export const menuCategories: MenuCategory[] = [
     items: [
       { id: "italian-soda", name: "Italian Soda", category: "Iced Beverages", description: "Passion fruit, blackberry, or raspberry.", prices: sizePrices("5.25", "5.85", "6.35"), tags: ["Customer Favorite", "Iced Only"] },
       { id: "iced-tea", name: "Iced Tea", category: "Iced Beverages", description: "Peach or pomegranate.", prices: sizePrices("5.25", "5.85", "6.35"), tags: ["Iced Only"] },
-      // TODO: Confirm sizes for the two-price lemonade rows.
       { id: "strawberry-lemonade", name: "Strawberry Lemonade", category: "Iced Beverages", prices: gvPrices("6.45", "6.85"), tags: ["Iced Only"] },
       { id: "blue-lemonade", name: "Blue Lemonade", category: "Iced Beverages", prices: gvPrices("6.55", "6.95"), tags: ["Iced Only"] },
       { id: "grapefruit-ade", name: "Grapefruit Ade", category: "Iced Beverages", prices: sizePrices("5.55", "6.05", "6.45"), tags: ["Iced Only"] },
       { id: "calamansi-ade", name: "Calamansi-Ade", category: "Iced Beverages", prices: singlePrice("6.70"), tags: ["Iced Only"] },
-      // TODO: Confirm sizes for the two-price ade row.
       { id: "strawberry-ade", name: "Strawberry Ade", category: "Iced Beverages", prices: gvPrices("6.15", "6.65"), tags: ["Iced Only"] },
       { id: "misugaru", name: "Misugaru", category: "Iced Beverages", korean: "미숫가루", prices: singlePrice("7.49"), tags: ["Iced Only"] },
     ],
