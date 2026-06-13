@@ -38,7 +38,7 @@ export const locationInfo = {
   city: "Carrollton, TX",
   address: "2625 Old Denton Rd #406, Carrollton, TX 75007",
   phone: "(972) 446-6633",
-  phone2: "(469) 449-8859",
+  phone2: "(469) 261-0054",
   hours: [
     { days: "Monday", time: "9 am – 10 pm" },
     { days: "Tuesday", time: "9 am – 10 pm" },
