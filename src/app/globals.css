@@ -430,11 +430,10 @@ dd {
 
 .size-legend {
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  margin: 0.6rem 0 0;
-  text-align: left;
-  width: 100%;
+  margin: 0.5rem 0 0;
+  letter-spacing: 0.01em;
 }
 
 .size-legend span {
@@ -443,6 +442,16 @@ dd {
   color: var(--coffee);
   font-weight: 900;
   padding: 0.05rem 0.35rem;
+}
+
+.hours-row {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.2rem 0 0;
+}
+
+.hours-row strong {
+  min-width: 5.5rem;
 }
 
 @media (min-width: 720px) {

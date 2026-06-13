@@ -100,8 +100,12 @@ export default function Home() {
           <p className="location">{locationInfo.city}</p>
           <h1>Coffee, Bingsu, Waffles & Korean Caf&eacute; Favorites</h1>
           <p className="subtext">
-            Browse customer favorites, drinks, desserts, and caf&eacute; classics.
+            Browse customer favorites, drinks, desserts, and café classics.
           </p>
+          <p className="size-legend">
+            <span>T</span> Tall &nbsp;·&nbsp; <span>G</span> Grande &nbsp;·&nbsp; <span>V</span> Venti
+          </p>
+     
           <a
             className="order-btn"
             href={locationInfo.orderUrl}
@@ -124,9 +128,6 @@ export default function Home() {
           onChange={(event) => setSearch(event.target.value)}
           placeholder="Search drinks, waffles, bingsu..."
         />
-        <p className="size-legend">
-          <span>T</span> Tall &nbsp;·&nbsp; <span>G</span> Grande &nbsp;·&nbsp; <span>V</span> Venti
-        </p>
         <div className="category-scroll" aria-label="Menu categories">
           <button
             className={activeCategory === "all" ? "active" : ""}
@@ -202,8 +203,9 @@ export default function Home() {
           <div>
             <dt>Hours</dt>
             {locationInfo.hours.map((h) => (
-              <dd key={h.days}>
-                <strong>{h.days}</strong>&nbsp;{h.time}
+              <dd key={h.days} className="hours-row">
+                <strong>{h.days}</strong>
+                <span>{h.time}</span>
               </dd>
             ))}
           </div>
