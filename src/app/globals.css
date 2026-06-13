@@ -433,6 +433,8 @@ dd {
   font-size: 0.75rem;
   font-weight: 700;
   margin: 0.6rem 0 0;
+  text-align: left;
+  width: 100%;
 }
 
 .size-legend span {

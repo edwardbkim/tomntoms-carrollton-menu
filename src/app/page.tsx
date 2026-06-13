@@ -201,7 +201,11 @@ export default function Home() {
           </div>
           <div>
             <dt>Hours</dt>
-            <dd>{locationInfo.hours}</dd>
+            {locationInfo.hours.map((h) => (
+              <dd key={h.days}>
+                <strong>{h.days}</strong>&nbsp;{h.time}
+              </dd>
+            ))}
           </div>
         </dl>
       </section>

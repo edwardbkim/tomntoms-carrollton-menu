@@ -38,7 +38,15 @@ export const locationInfo = {
   city: "Carrollton, TX",
   address: "2625 Old Denton Rd #406, Carrollton, TX 75007",
   phone: "(972) 446-6633",
-  hours: "Sun–Thu  9 am–10 pm  ·  Fri–Sat  9 am–11 pm",
+  hours: [
+    { days: "Monday", time: "9 am – 10 pm" },
+    { days: "Tuesday", time: "9 am – 10 pm" },
+    { days: "Wednesday", time: "9 am – 10 pm" },
+    { days: "Thursday", time: "9 am – 10 pm" },
+    { days: "Friday", time: "9 am – 11 pm" },
+    { days: "Saturday", time: "9 am – 11 pm" },
+    { days: "Sunday", time: "9 am – 10 pm" },
+  ],
   instagramUrl: "https://www.instagram.com/tomntomscarrollton/",
   orderUrl: "https://order.peblla.com/tomntomscoffeecarrollton/order?sid=1242716167369096704",
 };
