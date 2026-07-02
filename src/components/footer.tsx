@@ -1,0 +1,76 @@
+import Link from "next/link";
+import { businessLinks, fullAddress, site } from "@/data/site";
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: businessLinks.menu, label: "Menu" },
+  { href: businessLinks.about, label: "About" },
+  { href: businessLinks.visit, label: "Visit" },
+  { href: businessLinks.contact, label: "Contact" }
+];
+
+export function Footer() {
+  return (
+    <footer className="border-t border-[color:var(--color-border)] bg-white">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_1fr] lg:px-8">
+        <div>
+          <div className="flex items-center gap-3">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--color-burgundy)] text-base font-semibold tracking-[0.2em] text-white">
+              TT
+            </span>
+            <div>
+              <p className="font-display text-2xl text-[color:var(--color-text)]">{site.shortName}</p>
+              <p className="text-xs uppercase tracking-[0.26em] text-[color:var(--color-muted)]">
+                Premium Cafe
+              </p>
+            </div>
+          </div>
+          <p className="mt-5 max-w-md text-sm leading-7 text-[color:var(--color-muted)]">
+            {site.description}
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--color-green)]">
+            Navigation
+          </p>
+          <div className="mt-4 flex flex-col gap-3">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-[color:var(--color-text)] transition hover:text-[color:var(--color-burgundy)]"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--color-green)]">
+            Visit
+          </p>
+          <div className="mt-4 space-y-3 text-sm leading-7 text-[color:var(--color-muted)]">
+            <p>{fullAddress}</p>
+            <p>
+              <Link href={site.phoneHref} className="text-[color:var(--color-text)] hover:text-[color:var(--color-burgundy)]">
+                {site.phone}
+              </Link>
+            </p>
+            <p>
+              <Link href={`mailto:${site.email}`} className="text-[color:var(--color-text)] hover:text-[color:var(--color-burgundy)]">
+                {site.email}
+              </Link>
+            </p>
+            <p>
+              <Link href={site.instagram} className="text-[color:var(--color-text)] hover:text-[color:var(--color-burgundy)]">
+                Instagram
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
