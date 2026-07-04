@@ -5,32 +5,33 @@ export type HoursEntry = {
 };
 
 export const site = {
-  name: "Tom N Toms Cafe",
-  shortName: "Tom N Toms",
-  tagline: "Premium coffee, warm food, and a living-room atmosphere for the everyday rhythm of the neighborhood.",
+  name: "Tom N Tom's",
+  shortName: "Tom N Tom's",
+  tagline: "Korean café & bakery in Carrollton",
   description:
-    "Tom N Toms Cafe is a premium, modern cafe built for slow mornings, focused afternoons, and easy evenings with coffee, made-to-order food, and a warm community atmosphere.",
+    "Tom N Tom's is a Korean café and bakery in Carrollton, TX — specialty coffee, handcrafted drinks, fresh bakery, waffles, snow flakes, and made-to-order food.",
   address: {
-    street: "1458 Market Street",
-    city: "Indianapolis",
-    state: "IN",
-    zip: "46204"
+    street: "2625 Old Denton Rd, Ste 406",
+    city: "Carrollton",
+    state: "TX",
+    zip: "75007"
   },
-  phone: "(317) 555-0148",
-  phoneHref: "tel:+13175550148",
-  email: "hello@tomntomscafe.com",
-  instagram: "https://instagram.com/tomntomscafe",
-  orderingLink: "https://order.example.com/tomntomscafe",
-  mapsLink: "https://maps.google.com/?q=1458+Market+Street+Indianapolis+IN+46204",
-  mapsEmbedLink: "https://www.google.com/maps?q=1458+Market+Street+Indianapolis+IN+46204&output=embed",
+  phone: "(972) 446-6633",
+  phoneHref: "tel:+19724466633",
+  email: "admin@tomntomscarrollton.com",
+  instagram: "https://instagram.com/tomntomscarrollton",
+  orderingLink: "https://tomntomscoffeetx.pebla.com",
+  mapsLink: "https://maps.google.com/?q=2625+Old+Denton+Rd+Ste+406+Carrollton+TX+75007",
+  mapsEmbedLink:
+    "https://www.google.com/maps?q=2625+Old+Denton+Rd+Ste+406+Carrollton+TX+75007&output=embed",
   hero: {
-    eyebrow: "Modern Korean Cafe",
-    headline: "A refined neighborhood cafe for coffee, conversation, and calm.",
+    eyebrow: "Korean Café & Bakery",
+    headline: "Korean café & bakery in Carrollton",
     subheadline:
-      "Thoughtful espresso, made-to-order bites, and a warm atmosphere designed for studying, meetings, quiet work, and slow catch-ups."
+      "Specialty coffee, handcrafted drinks, fresh bakery, snow flakes, waffles, and made-to-order food."
   },
   story:
-    "Tom N Toms is a premium, comfortable cafe that blends high-quality coffee, made-to-order food, and a relaxing environment that feels like a living room, library, and warm den. It is designed for studying, meetings, working, or unwinding, while creating space for local vendors and supporting the community through thoughtful sourcing and hospitality.",
+    "Tom N Tom's is a Korean specialty café and bakery in Carrollton, TX. Since 1999, Tom N Toms has served premium espresso, handcrafted beverages, and fresh baked goods rooted in Korean café culture.",
   hours: [
     { day: "Monday", open: "7:00 AM", close: "8:00 PM" },
     { day: "Tuesday", open: "7:00 AM", close: "8:00 PM" },
@@ -43,42 +44,44 @@ export const site = {
   experience: [
     {
       title: "Dine In",
-      description: "Settle into layered seating, warm light, and room to linger over handcrafted drinks and fresh food."
+      description:
+        "Two floors of seating, warm brick walls, and room to linger over handcrafted drinks and fresh food."
     },
     {
       title: "Study",
-      description: "Quiet corners, dependable Wi-Fi, and generous tables support long focus sessions without feeling clinical."
+      description:
+        "Quiet corners, dependable Wi-Fi, and generous tables support long focus sessions."
     },
     {
       title: "Meet",
-      description: "A polished but relaxed backdrop for team check-ins, client coffee, and neighborhood conversations."
+      description: "A relaxed backdrop for team check-ins, client coffee, and neighborhood conversations."
     },
     {
       title: "Relax",
-      description: "Come for a reset: soft music, inviting textures, and a calm, elevated pace from morning through evening."
+      description: "Come for a reset: soft music, warm textures, and a calm pace from morning through evening."
     }
   ],
   featuredCategories: [
     {
       title: "Coffee & Espresso",
-      description: "Classic espresso drinks with a smooth, premium profile.",
+      description: "Signature espresso drinks with a smooth, premium profile.",
       href: "/menu#coffee-espresso"
     },
     {
-      title: "Signature Drinks",
-      description: "House favorites with a modern Korean cafe sensibility.",
-      href: "/menu#signature-drinks"
+      title: "Specialty Drinks",
+      description: "House favorites with a modern Korean café sensibility.",
+      href: "/menu#specialty-drinks"
     },
     {
-      title: "Toasts & Sandwiches",
-      description: "Made-to-order food designed to pair with long cafe stays.",
-      href: "/menu#toasts-sandwiches"
+      title: "Snow Flakes",
+      description: "Korean shaved ice with seasonal toppings and house sauces.",
+      href: "/menu#snow-flakes"
     }
   ],
   seo: {
-    title: "Tom N Toms Cafe | Premium Coffee, Food, and Community",
+    title: "Tom N Tom's Carrollton | Korean Café & Bakery",
     description:
-      "Discover Tom N Toms Cafe: a premium modern cafe with coffee, espresso, fresh food, comfortable seating, and a warm community atmosphere.",
+      "Tom N Tom's Carrollton — Korean specialty café and bakery. Espresso, handcrafted drinks, snow flakes, waffles, pretzels, fresh bakery, and made-to-order food. Order online.",
     ogImage: "/images/hero/og-cafe.svg"
   }
 };

@@ -1,22 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --font-body: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --color-burgundy: #6b1717;
-  --color-burgundy-strong: #571111;
-  --color-green: #0b4f3a;
-  --color-cream: #faf8f5;
-  --color-cream-strong: #f3efe8;
-  --color-surface: #ffffff;
-  --color-text: #171717;
-  --color-muted: #5f6368;
-  --color-border: rgba(23, 23, 23, 0.1);
+  --color-cream: #FAF5EC;
+  --color-cream-alt: #F3EBD9;
+  --color-surface: #FFFFFF;
+  --color-latte: #E9DFCE;
+  --color-latte-deep: #D4C5AE;
+  --color-espresso: #3E2B1F;
+  --color-muted: #7A6555;
+  --color-muted-light: #A89180;
+  --color-red: #581C20;
+  --color-red-hover: #721F27;
+  --color-border: rgba(62, 43, 31, 0.1);
+
+  --font-sans: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
 }
 
 @theme inline {
+  --font-sans: var(--font-sans);
   --font-display: var(--font-display);
-  --font-body: var(--font-body);
 }
 
 * {
@@ -29,8 +32,9 @@ html {
 
 body {
   margin: 0;
+  font-family: var(--font-sans);
   background: var(--color-cream);
-  color: var(--color-text);
+  color: var(--color-espresso);
 }
 
 a {
@@ -44,15 +48,11 @@ img {
 }
 
 ::selection {
-  background: rgba(107, 23, 23, 0.14);
+  background: rgba(88, 28, 32, 0.14);
 }
 
 .font-display {
-  font-family: var(--font-display), serif;
-}
-
-.font-body {
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-display);
 }
 
 @media (prefers-reduced-motion: reduce) {

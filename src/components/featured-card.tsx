@@ -15,10 +15,10 @@ export function FeaturedCard({ title, description, href }: FeaturedCardProps) {
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="font-display text-2xl text-[color:var(--color-text)]">{title}</p>
+          <p className="font-display text-2xl text-[color:var(--color-espresso)]">{title}</p>
           <p className="mt-3 text-sm leading-7 text-[color:var(--color-muted)]">{description}</p>
         </div>
-        <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[color:var(--color-cream)] text-[color:var(--color-burgundy)] transition group-hover:bg-[color:var(--color-burgundy)] group-hover:text-white">
+        <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[color:var(--color-cream)] text-[color:var(--color-red)] transition group-hover:bg-[color:var(--color-red)] group-hover:text-white">
           <ArrowUpRight className="h-5 w-5" />
         </span>
       </div>

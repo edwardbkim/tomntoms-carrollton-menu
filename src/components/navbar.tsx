@@ -48,15 +48,15 @@ export function Navbar() {
         )}
       >
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--color-burgundy)] text-base font-semibold tracking-[0.2em] text-white shadow-[0_10px_24px_rgba(107,23,23,0.25)]">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--color-red)] text-base font-semibold tracking-[0.2em] text-white shadow-[0_10px_24px_rgba(88,28,32,0.25)]">
             TT
           </span>
           <div>
-            <p className="font-display text-xl leading-none text-[color:var(--color-text)]">
+            <p className="font-display text-xl leading-none text-[color:var(--color-espresso)]">
               {site.shortName}
             </p>
             <p className="mt-1 text-[11px] uppercase tracking-[0.26em] text-[color:var(--color-muted)]">
-              Cafe
+              Café
             </p>
           </div>
         </Link>
@@ -66,7 +66,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-burgundy)]"
+              className="text-sm font-medium text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
             >
               {item.label}
             </Link>
@@ -76,7 +76,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href={site.phoneHref}
-            className="inline-flex items-center gap-2 text-sm font-medium text-[color:var(--color-text)] transition hover:text-[color:var(--color-green)]"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
           >
             <Phone className="h-4 w-4" />
             {site.phone}
@@ -86,7 +86,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--color-border)] bg-white/85 text-[color:var(--color-text)] lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--color-border)] bg-white/85 text-[color:var(--color-espresso)] lg:hidden"
           onClick={() => setIsOpen((value) => !value)}
           aria-expanded={isOpen}
           aria-label="Toggle navigation menu"
@@ -102,7 +102,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-2xl px-4 py-3 text-base font-medium text-[color:var(--color-text)] transition hover:bg-[color:var(--color-cream-strong)]"
+                className="rounded-2xl px-4 py-3 text-base font-medium text-[color:var(--color-espresso)] transition hover:bg-[color:var(--color-cream-alt)]"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -110,7 +110,7 @@ export function Navbar() {
             ))}
             <Link
               href={site.phoneHref}
-              className="rounded-2xl px-4 py-3 text-base font-medium text-[color:var(--color-green)]"
+              className="rounded-2xl px-4 py-3 text-base font-medium text-[color:var(--color-red)]"
               onClick={() => setIsOpen(false)}
             >
               Call {site.phone}
