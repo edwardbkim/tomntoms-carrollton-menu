@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { MenuItem as MenuItemType } from "@/data/menu";
 import { formatPrice } from "@/lib/utils";
+import { MinhwaBlossom } from "./icons/minhwa-blossom";
 
 function hasHangul(text: string): boolean {
   return /[가-힣ᄀ-ᇿ㄰-㆏ꥠ-꥿ힰ-퟿]/.test(text);
@@ -21,7 +22,12 @@ function ItemName({ name }: { name: string }) {
   return <>{name}</>;
 }
 
-export function MenuItem({ item }: { item: MenuItemType }) {
+type MenuItemProps = {
+  item: MenuItemType;
+  blossomFallback?: boolean;
+};
+
+export function MenuItem({ item, blossomFallback = false }: MenuItemProps) {
   return (
     <article className="flex gap-3 border-b border-[color:var(--color-border)] py-5 sm:gap-4">
       {item.image ? (
@@ -33,6 +39,10 @@ export function MenuItem({ item }: { item: MenuItemType }) {
             sizes="(min-width: 640px) 80px, 64px"
             className="object-cover"
           />
+        </div>
+      ) : blossomFallback ? (
+        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[color:var(--color-cream-alt)] sm:h-20 sm:w-20">
+          <MinhwaBlossom />
         </div>
       ) : null}
 

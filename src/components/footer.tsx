@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { businessLinks, fullAddress, site } from "@/data/site";
+import { DojangSeal } from "./icons/dojang-seal";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -15,9 +16,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_1fr] lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--color-red)] text-base font-semibold tracking-[0.2em] text-white">
-              TT
-            </span>
+            <DojangSeal />
             <div>
               <p className="font-display text-2xl text-[color:var(--color-espresso)]">
                 {site.shortName}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { site } from "@/data/site";
 import { CTAButton } from "./cta-button";
+import { MinhwaHeroBranch } from "./icons/minhwa-hero-branch";
 
 export function MenuHero() {
   return (
@@ -22,6 +23,7 @@ export function MenuHero() {
           </div>
         </div>
 
+        {/* Photo panel */}
         <div className="relative flex-1 overflow-hidden">
           <Image
             src="/images/hero/hero-waffle.webp"
@@ -33,9 +35,16 @@ export function MenuHero() {
           />
           {/* Soft left-edge blend into cream */}
           <div
-            className="absolute inset-y-0 left-0 w-16 pointer-events-none"
+            className="pointer-events-none absolute inset-y-0 left-0 w-16"
             style={{ background: "linear-gradient(to right, #FAF5EC, transparent)" }}
           />
+        </div>
+
+        {/* Minhwa branch — straddles the cream/photo split */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute left-[36%] top-4">
+            <MinhwaHeroBranch className="opacity-90" />
+          </div>
         </div>
       </div>
 
@@ -51,7 +60,7 @@ export function MenuHero() {
             className="object-cover object-center"
           />
           <div
-            className="absolute inset-x-0 bottom-0 h-20 pointer-events-none"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-20"
             style={{ background: "linear-gradient(to top, #FAF5EC, transparent)" }}
           />
         </div>

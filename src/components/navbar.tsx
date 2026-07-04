@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { businessLinks, site } from "@/data/site";
@@ -48,9 +49,15 @@ export function Navbar() {
         )}
       >
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--color-red)] text-base font-semibold tracking-[0.2em] text-white shadow-[0_10px_24px_rgba(88,28,32,0.25)]">
-            TT
-          </span>
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[color:var(--color-espresso)] shadow-[0_10px_24px_rgba(88,28,32,0.20)]">
+            <Image
+              src="/brand/logo-white.png"
+              alt="Tom N Tom's logo"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
+          </div>
           <div>
             <p className="font-display text-xl leading-none text-[color:var(--color-espresso)]">
               {site.shortName}
