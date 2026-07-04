@@ -9,7 +9,7 @@ export function MenuCategory({ category }: MenuCategoryProps) {
   return (
     <section
       id={category.slug}
-      className="scroll-mt-28 rounded-[2rem] border border-[color:var(--color-border)] bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.04)] sm:p-8"
+      className="scroll-mt-40 rounded-[2rem] border border-[color:var(--color-border)] bg-white p-5 shadow-[0_18px_45px_rgba(15,23,42,0.04)] sm:p-8 lg:scroll-mt-28"
     >
       <div className="mb-6 max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[color:var(--color-muted)]">
