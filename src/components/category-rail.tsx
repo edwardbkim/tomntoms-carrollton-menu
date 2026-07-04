@@ -21,8 +21,8 @@ export function CategoryRail() {
           className={cn(
             "rounded-xl px-4 py-2.5 text-sm font-medium transition-colors duration-150",
             activeSlug === cat.slug
-              ? "border-l-[3px] border-[color:var(--color-red)] pl-[13px] text-[color:var(--color-red)]"
-              : "border-l-[3px] border-transparent text-[color:var(--color-muted)] hover:bg-[color:var(--color-cream-alt)] hover:text-[color:var(--color-red)]"
+              ? "border-l-[3px] border-[color:var(--color-red)] pl-[13px] !text-[color:var(--color-red)]"
+              : "border-l-[3px] border-transparent !text-[color:var(--color-muted)] hover:bg-[color:var(--color-cream-alt)] hover:!text-[color:var(--color-red)]"
           )}
         >
           {cat.category}

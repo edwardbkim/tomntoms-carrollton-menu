@@ -79,6 +79,11 @@ export function MenuItem({ item, blossomFallback = false }: MenuItemProps) {
                 </div>
               ))}
             </dl>
+          ) : item.sizesPending && item.price ? (
+            <p className="text-right text-base font-semibold text-[color:var(--color-espresso)] sm:text-lg">
+              <span className="block text-xs font-normal tracking-wide text-[color:var(--color-muted-light)]">from</span>
+              {formatPrice(item.price)}
+            </p>
           ) : item.price ? (
             <p className="text-base font-semibold text-[color:var(--color-espresso)] sm:text-lg">
               {formatPrice(item.price)}
