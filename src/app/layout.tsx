@@ -89,7 +89,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <div className="relative min-h-screen overflow-x-hidden bg-[color:var(--color-cream)] text-[color:var(--color-espresso)]">
+        <div className="relative min-h-screen overflow-x-clip bg-[color:var(--color-cream)] text-[color:var(--color-espresso)]">
           <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top_left,rgba(88,28,32,0.06),transparent_38%)]" />
           <Navbar />
           <main>{children}</main>

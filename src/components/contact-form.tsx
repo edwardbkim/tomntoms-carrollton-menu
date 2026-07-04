@@ -48,7 +48,7 @@ export function ContactForm() {
         </label>
         <button
           type="submit"
-          className="inline-flex min-h-12 items-center justify-center rounded-full bg-[color:var(--color-red)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-white shadow-[0_16px_40px_rgba(88,28,32,0.24)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-red-hover)]"
+          className="inline-flex min-h-12 items-center justify-center rounded-full bg-[color:var(--color-red)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#ffffff] shadow-[0_16px_40px_rgba(88,28,32,0.24)] transition hover:-translate-y-0.5 hover:bg-[color:var(--color-red-hover)]"
         >
           Send Message
         </button>

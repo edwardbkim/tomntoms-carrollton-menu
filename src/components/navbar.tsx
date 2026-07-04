@@ -36,80 +36,82 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 transition-all duration-300",
-        isScrolled ? "px-3 pt-3" : "px-0 pt-0"
+        "sticky top-0 z-50 bg-[color:var(--color-cream)] transition-all duration-300",
+        isScrolled
+          ? "border-b border-[color:var(--color-border)] shadow-[0_4px_20px_rgba(62,43,31,0.06)]"
+          : "border-b border-transparent"
       )}
     >
-      <div
-        className={cn(
-          "mx-auto flex max-w-7xl items-center justify-between transition-all duration-300",
-          isScrolled
-            ? "rounded-full border border-white/70 bg-white/82 px-4 py-3 shadow-[0_12px_40px_rgba(15,23,42,0.08)] backdrop-blur-xl"
-            : "border-b border-transparent bg-transparent px-4 py-4 sm:px-6 lg:px-8"
-        )}
-      >
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[color:var(--color-espresso)] shadow-[0_10px_24px_rgba(88,28,32,0.20)]">
-            <Image
-              src="/brand/logo-white.png"
-              alt="Tom N Tom's logo"
-              width={36}
-              height={36}
-              className="object-contain"
-            />
-          </div>
-          <div>
-            <p className="font-display text-xl leading-none text-[color:var(--color-espresso)]">
-              {site.shortName}
-            </p>
-            <p className="mt-1 text-[11px] uppercase tracking-[0.26em] text-[color:var(--color-muted)]">
-              Café
-            </p>
-          </div>
-        </Link>
-
-        <nav className="hidden items-center gap-7 lg:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            href={site.phoneHref}
-            className="inline-flex items-center gap-2 text-sm font-medium text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
-          >
-            <Phone className="h-4 w-4" />
-            {site.phone}
-          </Link>
-          <CTAButton href={site.orderingLink}>Order Now</CTAButton>
-        </div>
-
-        <button
-          type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--color-border)] bg-white/85 text-[color:var(--color-espresso)] lg:hidden"
-          onClick={() => setIsOpen((value) => !value)}
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation menu"
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div
+          className={cn(
+            "flex w-full items-center justify-between transition-all duration-300",
+            isScrolled ? "py-3" : "py-4"
+          )}
         >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full">
+              <Image
+                src="/brand/logo-transparent.png"
+                alt="Tom N Tom's logo"
+                fill
+                className="object-cover"
+                sizes="44px"
+              />
+            </div>
+            <div>
+              <p className="font-display text-xl leading-none text-[color:var(--color-espresso)]">
+                {site.shortName}
+              </p>
+              <p className="mt-1 text-[11px] uppercase tracking-[0.26em] text-[color:var(--color-muted)]">
+                Café
+              </p>
+            </div>
+          </Link>
 
-      {isOpen ? (
-        <div className="mx-3 mt-3 rounded-[2rem] border border-white/70 bg-white/92 p-4 shadow-[0_18px_45px_rgba(15,23,42,0.12)] backdrop-blur-xl lg:hidden">
-          <nav className="flex flex-col gap-2">
+          <nav className="hidden items-center gap-6 lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-2xl px-4 py-3 text-base font-medium text-[color:var(--color-espresso)] transition hover:bg-[color:var(--color-cream-alt)]"
+                className="text-sm font-medium tracking-[0.04em] text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden items-center gap-3 lg:flex">
+            <Link
+              href={site.phoneHref}
+              className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.04em] text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
+            >
+              <Phone className="h-4 w-4" />
+              {site.phone}
+            </Link>
+            <CTAButton href={site.orderingLink}>Order Now</CTAButton>
+          </div>
+
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-surface)] text-[color:var(--color-espresso)] lg:hidden"
+            onClick={() => setIsOpen((value) => !value)}
+            aria-expanded={isOpen}
+            aria-label="Toggle navigation menu"
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+      </div>
+
+      {isOpen ? (
+        <div className="border-t border-[color:var(--color-border)] bg-[color:var(--color-cream)] px-4 py-3 sm:px-6 lg:hidden">
+          <nav className="flex flex-col gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-xl px-4 py-3 text-base font-medium tracking-[0.03em] text-[color:var(--color-espresso)] transition hover:bg-[color:var(--color-cream-alt)] hover:text-[color:var(--color-red)]"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -117,14 +119,16 @@ export function Navbar() {
             ))}
             <Link
               href={site.phoneHref}
-              className="rounded-2xl px-4 py-3 text-base font-medium text-[color:var(--color-red)]"
+              className="rounded-xl px-4 py-3 text-base font-medium text-[color:var(--color-red)]"
               onClick={() => setIsOpen(false)}
             >
               Call {site.phone}
             </Link>
-            <CTAButton href={site.orderingLink} className="mt-2 w-full" variant="primary">
-              Order Now
-            </CTAButton>
+            <div className="mt-2 px-4 pb-2">
+              <CTAButton href={site.orderingLink} className="w-full" variant="primary">
+                Order Now
+              </CTAButton>
+            </div>
           </nav>
         </div>
       ) : null}

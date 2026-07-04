@@ -19,7 +19,7 @@ export function CategoryChipBar() {
   }, [activeSlug]);
 
   return (
-    <div className="sticky top-[57px] z-30 -mx-4 border-b border-[color:var(--color-border)] bg-[#FAF5EC]/95 backdrop-blur sm:-mx-6 lg:hidden">
+    <div className="sticky top-[76px] z-30 -mx-4 border-b border-[color:var(--color-border)] bg-[#FAF5EC]/95 backdrop-blur sm:-mx-6 lg:hidden">
       <div
         ref={barRef}
         className="flex gap-1.5 overflow-x-auto px-4 py-2.5 [scrollbar-width:none] sm:px-6"
@@ -32,7 +32,7 @@ export function CategoryChipBar() {
             className={cn(
               "inline-flex shrink-0 items-center rounded-full px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap transition-colors duration-150",
               activeSlug === cat.slug
-                ? "bg-[color:var(--color-red)] text-white"
+                ? "bg-[color:var(--color-red)] text-[#ffffff]"
                 : "bg-[color:var(--color-cream-alt)] text-[color:var(--color-muted)] hover:bg-[color:var(--color-latte)] hover:text-[color:var(--color-espresso)]"
             )}
           >

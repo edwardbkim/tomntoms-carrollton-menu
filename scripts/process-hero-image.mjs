@@ -10,16 +10,24 @@ const JOBS = [
   {
     src: `${HERO_SRC}/strawberrieswhipwaffle.jpg`,
     out: `${DEST}/hero-waffle.webp`,
-    // Center crop to 4:5 portrait, warm grade slightly
+    // Banked — not currently in use
     width: 900,
     height: 1125,
   },
   {
     src: `${HERO_SRC}/blt-and-bluelemonade.jpg`,
     out: `${DEST}/hero-blt.webp`,
-    // Square crop for future use
+    // Banked — not currently in use
     width: 900,
     height: 900,
+  },
+  {
+    src: `${HERO_SRC}/hero-candidate.png`,
+    out: `${DEST}/hero-candidate.webp`,
+    // Full 16:9 tableau — no crop, resize to 1400px wide
+    width: 1400,
+    height: null, // preserve aspect ratio
+    noModulate: true, // warm cream background; no grading needed
   },
 ];
 
@@ -30,29 +38,35 @@ for (const job of JOBS) {
   const srcW = meta.width;
   const srcH = meta.height;
 
-  // Center crop to target ratio
-  const targetRatio = job.width / job.height;
-  const srcRatio = srcW / srcH;
+  let pipeline = sharp(job.src);
 
-  let cropW, cropH, left, top;
-  if (srcRatio > targetRatio) {
-    cropH = srcH;
-    cropW = Math.round(srcH * targetRatio);
-    left = Math.round((srcW - cropW) / 2);
-    top = 0;
-  } else {
-    cropW = srcW;
-    cropH = Math.round(srcW / targetRatio);
-    left = 0;
-    top = Math.round((srcH - cropH) / 2);
+  if (job.height !== null) {
+    // Center crop to target ratio
+    const targetRatio = job.width / job.height;
+    const srcRatio = srcW / srcH;
+
+    let cropW, cropH, left, top;
+    if (srcRatio > targetRatio) {
+      cropH = srcH;
+      cropW = Math.round(srcH * targetRatio);
+      left = Math.round((srcW - cropW) / 2);
+      top = 0;
+    } else {
+      cropW = srcW;
+      cropH = Math.round(srcW / targetRatio);
+      left = 0;
+      top = Math.round((srcH - cropH) / 2);
+    }
+    pipeline = pipeline.extract({ left, top, width: cropW, height: cropH });
   }
 
-  await sharp(job.src)
-    .extract({ left, top, width: cropW, height: cropH })
-    .resize({ width: job.width, withoutEnlargement: true })
-    .modulate({ brightness: 1.08, saturation: 1.05 })
-    .webp({ quality: 88 })
-    .toFile(job.out);
+  pipeline = pipeline.resize({ width: job.width, withoutEnlargement: true });
+
+  if (!job.noModulate) {
+    pipeline = pipeline.modulate({ brightness: 1.08, saturation: 1.05 });
+  }
+
+  await pipeline.webp({ quality: 90 }).toFile(job.out);
 
   console.log(`✓ ${job.out}`);
 }

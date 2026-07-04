@@ -20,7 +20,7 @@ export const site = {
   phoneHref: "tel:+19724466633",
   email: "admin@tomntomscarrollton.com",
   instagram: "https://instagram.com/tomntomscarrollton",
-  orderingLink: "https://tomntomscoffeetx.pebla.com",
+  orderingLink: "https://tomntomscoffeetx.peblla.com",
   mapsLink: "https://maps.google.com/?q=2625+Old+Denton+Rd+Ste+406+Carrollton+TX+75007",
   mapsEmbedLink:
     "https://www.google.com/maps?q=2625+Old+Denton+Rd+Ste+406+Carrollton+TX+75007&output=embed",

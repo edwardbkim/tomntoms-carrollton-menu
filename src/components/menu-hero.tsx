@@ -7,15 +7,15 @@ export function MenuHero() {
   return (
     <section className="relative overflow-hidden bg-[color:var(--color-cream)]">
       {/* Desktop: left cream panel + right photo */}
-      <div className="hidden lg:flex" style={{ minHeight: "380px" }}>
-        <div className="flex w-[42%] shrink-0 flex-col justify-center px-12 py-14 xl:px-16">
+      <div className="hidden lg:flex" style={{ minHeight: "440px" }}>
+        <div className="flex w-[36%] shrink-0 flex-col justify-center px-10 py-14 xl:px-14">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[color:var(--color-muted)]">
             {site.hero.eyebrow}
           </p>
           <h1 className="font-display text-4xl leading-tight text-[color:var(--color-espresso)] xl:text-5xl">
             {site.hero.headline}
           </h1>
-          <p className="mt-4 max-w-sm text-base leading-7 text-[color:var(--color-muted)]">
+          <p className="mt-4 max-w-xs text-base leading-7 text-[color:var(--color-muted)]">
             {site.hero.subheadline}
           </p>
           <div className="mt-8">
@@ -23,48 +23,39 @@ export function MenuHero() {
           </div>
         </div>
 
-        {/* Photo panel */}
+        {/* Photo panel — cream background matches site; no overlay gradient needed */}
         <div className="relative flex-1 overflow-hidden">
           <Image
-            src="/images/hero/hero-waffle.webp"
-            alt="Strawberry whip cream waffle with coffee at Tom N Tom's Carrollton"
+            src="/images/hero/hero-candidate.webp"
+            alt="Tom N Tom's signature menu — snow flakes, waffles, specialty drinks, and fresh food"
             fill
             priority
-            sizes="58vw"
+            sizes="64vw"
             className="object-cover object-center"
-          />
-          {/* Soft left-edge blend into cream */}
-          <div
-            className="pointer-events-none absolute inset-y-0 left-0 w-16"
-            style={{ background: "linear-gradient(to right, #FAF5EC, transparent)" }}
           />
         </div>
 
-        {/* Minhwa branch — straddles the cream/photo split */}
+        {/* Minhwa branch at the cream/photo junction */}
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[36%] top-4">
-            <MinhwaHeroBranch className="opacity-90" />
+          <div className="absolute left-[34%] top-4">
+            <MinhwaHeroBranch className="opacity-85" />
           </div>
         </div>
       </div>
 
-      {/* Mobile: stacked photo then text */}
+      {/* Mobile: photo banner then text */}
       <div className="lg:hidden">
-        <div className="relative aspect-[3/2] w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/9" }}>
           <Image
-            src="/images/hero/hero-waffle.webp"
-            alt="Strawberry whip cream waffle with coffee at Tom N Tom's Carrollton"
+            src="/images/hero/hero-candidate.webp"
+            alt="Tom N Tom's signature menu — snow flakes, waffles, specialty drinks, and fresh food"
             fill
             priority
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-20"
-            style={{ background: "linear-gradient(to top, #FAF5EC, transparent)" }}
-          />
         </div>
-        <div className="px-4 pb-6 pt-4 sm:px-6">
+        <div className="px-4 pb-6 pt-5 sm:px-6">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.35em] text-[color:var(--color-muted)]">
             {site.hero.eyebrow}
           </p>
