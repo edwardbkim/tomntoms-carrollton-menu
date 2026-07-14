@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { businessLinks, fullAddress, site } from "@/data/site";
-import { DojangSeal } from "./icons/dojang-seal";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -16,7 +16,15 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_1fr] lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <DojangSeal />
+            <div className="relative h-14 w-[84px] shrink-0">
+              <Image
+                src="/brand/logo-transparent.png"
+                alt="Tom N Toms brand mark"
+                fill
+                sizes="84px"
+                className="object-contain"
+              />
+            </div>
             <div>
               <p className="font-display text-2xl text-[color:var(--color-espresso)]">
                 {site.shortName}

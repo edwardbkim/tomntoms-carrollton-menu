@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, Clock3, MapPin, PhoneCall } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { FeaturedCard } from "@/components/featured-card";
 import { DownloadApp } from "@/components/download-app";
 import { Hero } from "@/components/hero";
 import { InfoStrip } from "@/components/info-strip";
 import { SectionHeading } from "@/components/section-heading";
-import { CTAButton } from "@/components/cta-button";
 import { featuredMenuItems } from "@/data/menu";
-import { fullAddress, site } from "@/data/site";
+import { site } from "@/data/site";
 import { formatPrice } from "@/lib/utils";
 
 export default function HomePage() {
@@ -113,37 +112,6 @@ export default function HomePage() {
       </section>
 
       <InfoStrip />
-
-      <section className="px-4 pb-16 pt-6 sm:px-6 lg:px-8 lg:pb-24">
-        <div className="mx-auto grid max-w-7xl gap-6 rounded-[2.75rem] border border-[color:var(--color-border)] bg-white p-8 shadow-[0_20px_70px_rgba(15,23,42,0.06)] lg:grid-cols-[1fr_auto] lg:items-center lg:p-10">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--color-green)]">Plan Your Visit</p>
-            <h2 className="mt-4 font-display text-4xl leading-tight text-[color:var(--color-text)] sm:text-5xl">
-              Coffee worth visiting for, space worth staying in.
-            </h2>
-            <div className="mt-6 grid gap-4 text-sm leading-7 text-[color:var(--color-muted)] sm:grid-cols-3">
-              <div className="flex gap-3">
-                <MapPin className="mt-1 h-5 w-5 text-[color:var(--color-burgundy)]" />
-                <span>{fullAddress}</span>
-              </div>
-              <div className="flex gap-3">
-                <Clock3 className="mt-1 h-5 w-5 text-[color:var(--color-burgundy)]" />
-                <span>Open daily with extended evening hours on Friday and Saturday.</span>
-              </div>
-              <div className="flex gap-3">
-                <PhoneCall className="mt-1 h-5 w-5 text-[color:var(--color-burgundy)]" />
-                <span>{site.phone}</span>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <CTAButton href="/menu">View Menu</CTAButton>
-            <CTAButton href={site.phoneHref} variant="secondary">
-              Call Now
-            </CTAButton>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
