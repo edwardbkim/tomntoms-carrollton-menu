@@ -33,13 +33,13 @@ export const site = {
   story:
     "Tom N Toms is a Korean specialty café and bakery in Carrollton, TX. Since 1999, Tom N Toms has served premium espresso, handcrafted beverages, and fresh baked goods rooted in Korean café culture.",
   hours: [
-    { day: "Monday", open: "7:00 AM", close: "8:00 PM" },
-    { day: "Tuesday", open: "7:00 AM", close: "8:00 PM" },
-    { day: "Wednesday", open: "7:00 AM", close: "8:00 PM" },
-    { day: "Thursday", open: "7:00 AM", close: "8:00 PM" },
-    { day: "Friday", open: "7:00 AM", close: "9:00 PM" },
-    { day: "Saturday", open: "8:00 AM", close: "9:00 PM" },
-    { day: "Sunday", open: "8:00 AM", close: "6:00 PM" }
+    { day: "Monday", open: "9:00 AM", close: "10:00 PM" },
+    { day: "Tuesday", open: "9:00 AM", close: "10:00 PM" },
+    { day: "Wednesday", open: "9:00 AM", close: "10:00 PM" },
+    { day: "Thursday", open: "9:00 AM", close: "10:00 PM" },
+    { day: "Friday", open: "9:00 AM", close: "11:00 PM" },
+    { day: "Saturday", open: "9:00 AM", close: "11:00 PM" },
+    { day: "Sunday", open: "9:00 AM", close: "10:00 PM" }
   ],
   experience: [
     {
