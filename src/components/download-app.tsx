@@ -36,7 +36,7 @@ export function DownloadApp() {
                 {app.iosLink ? (
                   <a
                     href={app.iosLink}
-                    className="inline-flex min-h-12 items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[color:var(--color-red)] transition duration-300 hover:-translate-y-0.5"
+                    className="inline-flex min-h-12 items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[color:var(--color-red)] transition duration-200 hover:-translate-y-0.5"
                   >
                     <Apple className="h-5 w-5" />
                     App Store
@@ -45,7 +45,7 @@ export function DownloadApp() {
                 {app.androidLink ? (
                   <a
                     href={app.androidLink}
-                    className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+                    className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:bg-white/20"
                   >
                     <Play className="h-5 w-5" />
                     Google Play
@@ -82,7 +82,7 @@ export function DownloadApp() {
           <div className="flex flex-wrap items-center gap-5">
             <a
               href={site.orderingLink}
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[color:var(--color-red)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] !text-[#ffffff] shadow-[0_16px_40px_rgba(88,28,32,0.24)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[color:var(--color-red-hover)]"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[color:var(--color-red)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#ffffff] shadow-[0_16px_40px_rgba(88,28,32,0.24)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[color:var(--color-red-hover)]"
             >
               Order Now
             </a>

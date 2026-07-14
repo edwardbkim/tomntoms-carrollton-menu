@@ -65,7 +65,7 @@ export function Footer() {
             <p>
               <Link
                 href={site.phoneHref}
-                className="text-[color:var(--color-espresso)] hover:text-[color:var(--color-red)]"
+                className="text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
               >
                 {site.phone}
               </Link>
@@ -73,7 +73,7 @@ export function Footer() {
             <p>
               <Link
                 href={`mailto:${site.email}`}
-                className="text-[color:var(--color-espresso)] hover:text-[color:var(--color-red)]"
+                className="text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
               >
                 {site.email}
               </Link>
@@ -81,7 +81,7 @@ export function Footer() {
             <p>
               <Link
                 href={site.instagram}
-                className="text-[color:var(--color-espresso)] hover:text-[color:var(--color-red)]"
+                className="text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
               >
                 Instagram
               </Link>

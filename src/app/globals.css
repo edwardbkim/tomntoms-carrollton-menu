@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/*
+ * Tailwind v4 gates `hover:` behind `@media (hover: hover)` by default to
+ * avoid sticky-hover-after-tap on touchscreens. Some desktop/laptop Chrome
+ * installs report a touch-capable primary pointer even when driven by a
+ * mouse, which silently makes every hover: utility inert. Revert to plain
+ * `:hover` matching so hover states are reliable across devices.
+ */
+@custom-variant hover (&:hover);
+
 :root {
   --color-cream: #FAF5EC;
   --color-cream-alt: #F3EBD9;

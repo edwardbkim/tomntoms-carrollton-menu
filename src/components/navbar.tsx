@@ -74,7 +74,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium tracking-[0.04em] !text-[color:var(--color-espresso)] transition hover:!text-[color:var(--color-red)]"
+                className="text-sm font-medium tracking-[0.04em] text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
               >
                 {item.label}
               </Link>
@@ -84,7 +84,7 @@ export function Navbar() {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               href={site.phoneHref}
-              className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.04em] !text-[color:var(--color-espresso)] transition hover:!text-[color:var(--color-red)]"
+              className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.04em] text-[color:var(--color-espresso)] transition hover:text-[color:var(--color-red)]"
             >
               <Phone className="h-4 w-4" />
               {site.phone}
@@ -111,7 +111,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-xl px-4 py-3 text-base font-medium tracking-[0.03em] !text-[color:var(--color-espresso)] transition hover:bg-[color:var(--color-cream-alt)] hover:!text-[color:var(--color-red)]"
+                className="rounded-xl px-4 py-3 text-base font-medium tracking-[0.03em] text-[color:var(--color-espresso)] transition hover:bg-[color:var(--color-cream-alt)] hover:text-[color:var(--color-red)]"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -119,7 +119,7 @@ export function Navbar() {
             ))}
             <Link
               href={site.phoneHref}
-              className="rounded-xl px-4 py-3 text-base font-medium !text-[color:var(--color-red)]"
+              className="rounded-xl px-4 py-3 text-base font-medium text-[color:var(--color-red)]"
               onClick={() => setIsOpen(false)}
             >
               Call {site.phone}

@@ -32,7 +32,7 @@ export function CategoryChipBar() {
             className={cn(
               "inline-flex shrink-0 items-center rounded-full px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap transition-colors duration-150",
               activeSlug === cat.slug
-                ? "bg-[color:var(--color-red)] !text-[#ffffff]"
+                ? "bg-[color:var(--color-red)] text-[#ffffff]"
                 : "bg-[color:var(--color-cream-alt)] text-[color:var(--color-muted)] hover:bg-[color:var(--color-latte)] hover:text-[color:var(--color-espresso)]"
             )}
           >
