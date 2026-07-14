@@ -69,11 +69,20 @@ const JOBS = [
     height: null,
     noModulate: true,
   },
+  // Download the App section — rewards app QR code
+  {
+    src: `${REFS}/app/app-qr-ref.PNG`,
+    out: `${BASE}/public/images/app/app-qr.webp`,
+    width: 480,
+    height: null,
+    noModulate: true,
+  },
 ];
 
 await mkdir(`${BASE}/public/images/hero`, { recursive: true });
 await mkdir(`${BASE}/public/images/gallery`, { recursive: true });
 await mkdir(`${BASE}/public/images/categories`, { recursive: true });
+await mkdir(`${BASE}/public/images/app`, { recursive: true });
 
 for (const job of JOBS) {
   let pipeline = sharp(job.src);

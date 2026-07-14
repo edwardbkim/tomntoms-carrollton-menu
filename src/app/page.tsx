@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Clock3, MapPin, PhoneCall } from "lucide-react";
 import { FeaturedCard } from "@/components/featured-card";
+import { DownloadApp } from "@/components/download-app";
 import { Hero } from "@/components/hero";
 import { InfoStrip } from "@/components/info-strip";
 import { SectionHeading } from "@/components/section-heading";
@@ -85,29 +86,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="rounded-[2.5rem] border border-[color:var(--color-border)] bg-[linear-gradient(160deg,rgba(107,23,23,0.96),rgba(60,14,14,0.96))] p-8 text-white shadow-[0_26px_70px_rgba(107,23,23,0.24)] sm:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Brand Story</p>
-            <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
-              Hospitality with the intimacy of a living room and the focus of a library.
-            </h2>
-          </div>
-          <div>
-            <SectionHeading
-              eyebrow="The Cafe"
-              title="Built for people who want more than a quick coffee stop."
-              description={site.story}
-            />
-            <div className="mt-8 flex flex-wrap gap-3">
-              <CTAButton href="/about">Read More</CTAButton>
-              <CTAButton href={site.orderingLink} variant="secondary">
-                Order Now
-              </CTAButton>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DownloadApp />
 
       <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-7xl">

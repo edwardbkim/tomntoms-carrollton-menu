@@ -84,6 +84,26 @@ export const site = {
       alt: "Korean shaved ice snow flakes"
     }
   ],
+  app: {
+    // Master switch for the whole "Download the App" section on Home.
+    enabled: true,
+    name: "Tom N Toms Rewards",
+    headline: "Earn points on every order with the Tom N Toms app.",
+    description:
+      "Order ahead, skip the line, and rack up rewards on the drinks and food you already love. Every in-app order earns points toward free items.",
+    // Store + QR links — supplied by owner. Empty string hides that button.
+    iosLink: "https://apps.apple.com/us/app/tom-n-toms-coffee-tx/id6773552294",
+    androidLink:
+      "https://play.google.com/store/apps/details?id=com.alaeat.customer.android.tomntomscoffeecarrollton",
+    qrImage: "/images/app/app-qr.webp",
+    // Seasonal promo — flip `enabled` to false to hide the code without
+    // touching any component; swap `code`/`offer` to run a new promotion.
+    promo: {
+      enabled: true,
+      code: "COFFEE",
+      offer: "15% off your first in-app order"
+    }
+  },
   seo: {
     title: "Tom N Toms Carrollton | Korean Café & Bakery",
     description:
