@@ -27,7 +27,7 @@ export function MenuHero() {
         <div className="relative flex-1 overflow-hidden">
           <Image
             src="/images/hero/hero-candidate.webp"
-            alt="Tom N Tom's signature menu — snow flakes, waffles, specialty drinks, and fresh food"
+            alt="Tom N Toms signature menu — snow flakes, waffles, specialty drinks, and fresh food"
             fill
             priority
             sizes="64vw"
@@ -48,7 +48,7 @@ export function MenuHero() {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/9" }}>
           <Image
             src="/images/hero/hero-candidate.webp"
-            alt="Tom N Tom's signature menu — snow flakes, waffles, specialty drinks, and fresh food"
+            alt="Tom N Toms signature menu — snow flakes, waffles, specialty drinks, and fresh food"
             fill
             priority
             sizes="100vw"

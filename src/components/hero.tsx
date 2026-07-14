@@ -25,15 +25,26 @@ export function Hero() {
           </div>
           <div className="mt-10 grid max-w-lg grid-cols-3 gap-3 rounded-[2rem] border border-white/70 bg-white/78 p-3 shadow-[0_18px_50px_rgba(15,23,42,0.08)] backdrop-blur">
             {[
-              { label: "Coffee", value: "Specialty" },
-              { label: "Food", value: "Made Fresh" },
-              { label: "Atmosphere", value: "All Day" }
+              { label: "Coffee", value: "Specialty", image: "/images/hero/pillar-coffee.webp", alt: "Specialty coffee drinks" },
+              { label: "Food", value: "Made Fresh", image: "/images/hero/pillar-food.webp", alt: "Fresh café food" },
+              { label: "Atmosphere", value: "All Day", image: "/images/hero/pillar-atmosphere.webp", alt: "All day café atmosphere" }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-[1.5rem] bg-[color:var(--color-cream)] px-4 py-4 text-center">
-                <p className="font-display text-2xl text-[color:var(--color-espresso)]">{stat.value}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.24em] text-[color:var(--color-muted)]">
-                  {stat.label}
-                </p>
+              <div key={stat.label} className="overflow-hidden rounded-[1.5rem] bg-[color:var(--color-cream)]">
+                <div className="relative aspect-[3/4]">
+                  <Image
+                    src={stat.image}
+                    alt={stat.alt}
+                    fill
+                    sizes="(min-width: 1024px) 180px, 33vw"
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="px-4 py-4 text-center">
+                  <p className="font-display text-2xl text-[color:var(--color-espresso)]">{stat.value}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.24em] text-[color:var(--color-muted)]">
+                    {stat.label}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -42,13 +53,14 @@ export function Hero() {
         <div className="relative">
           <div className="absolute -bottom-6 right-0 h-28 w-28 rounded-full bg-[color:var(--color-red)]/10 blur-2xl" />
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/70 bg-white p-3 shadow-[0_28px_90px_rgba(15,23,42,0.12)]">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[linear-gradient(180deg,rgba(88,28,32,0.06),transparent)]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
               <Image
-                src="/images/hero/cafe-hero.svg"
-                alt="Illustrated Korean café interior with coffee and lounge seating"
+                src="/images/hero/cafe-exterior.webp"
+                alt="Tom N Toms Coffee exterior — ivy-covered brick building with warm string lights"
                 fill
                 priority
-                className="object-cover"
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                className="object-cover object-center"
               />
             </div>
             <div className="absolute bottom-8 left-8 right-8 rounded-[1.75rem] border border-white/70 bg-white/82 p-5 shadow-[0_18px_50px_rgba(15,23,42,0.1)] backdrop-blur">

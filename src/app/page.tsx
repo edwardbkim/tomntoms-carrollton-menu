@@ -28,6 +28,8 @@ export default function HomePage() {
                 title={category.title}
                 description={category.description}
                 href={category.href}
+                image={category.image}
+                alt={category.alt}
               />
             ))}
           </div>

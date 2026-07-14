@@ -53,7 +53,7 @@ export function Navbar() {
             <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full">
               <Image
                 src="/brand/logo-transparent.png"
-                alt="Tom N Tom's logo"
+                alt="Tom N Toms logo"
                 fill
                 className="object-cover"
                 sizes="44px"

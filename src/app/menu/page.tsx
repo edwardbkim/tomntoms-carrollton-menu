@@ -5,9 +5,9 @@ import { CategoryChipBar } from "@/components/category-chip-bar";
 import { menuCategories } from "@/data/menu";
 
 export const metadata = {
-  title: "Menu | Tom N Tom's Carrollton",
+  title: "Menu | Tom N Toms Carrollton",
   description:
-    "Browse the full Tom N Tom's Carrollton menu — coffee, specialty drinks, snow flakes, waffles, pretzels, bakery, and made-to-order food."
+    "Browse the full Tom N Toms Carrollton menu — coffee, specialty drinks, snow flakes, waffles, pretzels, bakery, and made-to-order food."
 };
 
 export default function MenuPage() {

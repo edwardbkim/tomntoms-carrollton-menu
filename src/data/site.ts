@@ -5,11 +5,11 @@ export type HoursEntry = {
 };
 
 export const site = {
-  name: "Tom N Tom's",
-  shortName: "Tom N Tom's",
+  name: "Tom N Toms",
+  shortName: "Tom N Toms",
   tagline: "Korean café & bakery in Carrollton",
   description:
-    "Tom N Tom's is a Korean café and bakery in Carrollton, TX — specialty coffee, handcrafted drinks, fresh bakery, waffles, snow flakes, and made-to-order food.",
+    "Tom N Toms is a Korean café and bakery in Carrollton, TX — specialty coffee, handcrafted drinks, fresh bakery, waffles, snow flakes, and made-to-order food.",
   address: {
     street: "2625 Old Denton Rd, Ste 406",
     city: "Carrollton",
@@ -31,7 +31,7 @@ export const site = {
       "Specialty coffee, handcrafted drinks, fresh bakery, snow flakes, waffles, and made-to-order food."
   },
   story:
-    "Tom N Tom's is a Korean specialty café and bakery in Carrollton, TX. Since 1999, Tom N Toms has served premium espresso, handcrafted beverages, and fresh baked goods rooted in Korean café culture.",
+    "Tom N Toms is a Korean specialty café and bakery in Carrollton, TX. Since 1999, Tom N Toms has served premium espresso, handcrafted beverages, and fresh baked goods rooted in Korean café culture.",
   hours: [
     { day: "Monday", open: "7:00 AM", close: "8:00 PM" },
     { day: "Tuesday", open: "7:00 AM", close: "8:00 PM" },
@@ -65,23 +65,29 @@ export const site = {
     {
       title: "Coffee & Espresso",
       description: "Signature espresso drinks with a smooth, premium profile.",
-      href: "/menu#coffee-espresso"
+      href: "/menu#coffee-espresso",
+      image: "/images/categories/cat-coffee.webp",
+      alt: "Coffee and espresso drinks"
     },
     {
       title: "Specialty Drinks",
       description: "House favorites with a modern Korean café sensibility.",
-      href: "/menu#specialty-drinks"
+      href: "/menu#specialty-drinks",
+      image: "/images/categories/cat-specialty.webp",
+      alt: "Specialty handcrafted drinks"
     },
     {
       title: "Snow Flakes",
       description: "Korean shaved ice with seasonal toppings and house sauces.",
-      href: "/menu#snow-flakes"
+      href: "/menu#snow-flakes",
+      image: "/images/categories/cat-snowflakes.webp",
+      alt: "Korean shaved ice snow flakes"
     }
   ],
   seo: {
-    title: "Tom N Tom's Carrollton | Korean Café & Bakery",
+    title: "Tom N Toms Carrollton | Korean Café & Bakery",
     description:
-      "Tom N Tom's Carrollton — Korean specialty café and bakery. Espresso, handcrafted drinks, snow flakes, waffles, pretzels, fresh bakery, and made-to-order food. Order online.",
+      "Tom N Toms Carrollton — Korean specialty café and bakery. Espresso, handcrafted drinks, snow flakes, waffles, pretzels, fresh bakery, and made-to-order food. Order online.",
     ogImage: "/images/hero/og-cafe.svg"
   }
 };

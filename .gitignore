@@ -8,3 +8,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Local design source references (not shipped)
+design-refs

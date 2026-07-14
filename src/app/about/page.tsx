@@ -15,10 +15,11 @@ export default function AboutPage() {
         <div className="relative overflow-hidden rounded-[2.5rem] border border-white/70 bg-white p-3 shadow-[0_28px_90px_rgba(15,23,42,0.12)]">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
             <Image
-              src="/images/gallery/about-space.svg"
-              alt="Stylized cafe interior seating area"
+              src="/images/gallery/cafe-interior.webp"
+              alt="Tom N Toms Carrollton interior — two-story café with exposed brick walls and neon sign"
               fill
-              className="object-cover"
+              sizes="(min-width: 1024px) 45vw, 90vw"
+              className="object-cover object-center"
             />
           </div>
         </div>

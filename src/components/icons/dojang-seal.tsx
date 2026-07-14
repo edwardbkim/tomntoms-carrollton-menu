@@ -4,7 +4,7 @@ export function DojangSeal({ size = 56, className }: { size?: number; className?
       width={size}
       height={size}
       viewBox="0 0 56 56"
-      aria-label="탐 — Tom N Tom's brand seal"
+      aria-label="탐 — Tom N Toms brand seal"
       className={className}
     >
       <rect width={56} height={56} fill="#581C20" />
