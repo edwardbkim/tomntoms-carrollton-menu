@@ -41,7 +41,7 @@ const JOBS = [
   },
   // Three-pillar strip: Atmosphere card
   {
-    src: `${REFS}/site-refs/alldayatmosphere-ref.PNG`,
+    src: `${REFS}/site-refs/alldayatmosphere1-ref.PNG`,
     out: `${BASE}/public/images/hero/pillar-atmosphere.webp`,
     width: 400,
     height: null,
